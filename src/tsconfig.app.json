@@ -1,0 +1,22 @@
+{
+  "extends": "../tsconfig.json",
+  "include": [
+    "./api.ts",
+    "**/*.d.ts"
+  ],
+  "compilerOptions": {
+    "declaration": true,
+    "outDir": "../dev",
+    "module": "commonjs",
+    "sourceMap": false,
+    "baseUrl": "./",
+    "paths": {}
+  },
+  "exclude": [
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "**/*.stub.ts",
+    "**/*.mock.ts",
+    "node_modules"
+  ]
+}

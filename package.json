@@ -1,0 +1,36 @@
+{
+  "name": "green-pass-decoder",
+  "version": "0.0.1",
+  "description": "Eu green pass decoder api ",
+  "main": "api.js ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:dev": "tsc --declaration -p src/tsconfig.app.json",
+    "compile:prod": "tsc --declaration -p src/tsconfig.prod.json",
+    "postcompile:dev": "npx tscpaths -v -r -p src/tsconfig.app.json -s ./dist",
+    "postcompile:prod": "npx tscpaths -v -r -p src/tsconfig.prod.json -s ./dist && npm run copy:package",
+    "copy:package": "node scripts/clean-pkg && cd ./dist && npm pack"
+  },
+  "keywords": [
+    "green",
+    "pass",
+    "vaccine",
+    "eu"
+  ],
+  "author": "Giorgio Bella",
+  "license": "MIT",
+  "peerDependencies": {
+    "base45": "^3.0.0",
+    "cbor": "^7.0.6",
+    "zlib": "^1.0.5"
+  },
+  "dependencies": {
+    "base45": "^3.0.0",
+    "cbor": "^7.0.6",
+    "zlib": "^1.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^16.4.2",
+    "jest": "^27.0.6"
+  }
+}
